@@ -1,5 +1,6 @@
 @import './../color';
 @import'./../fonts';
+@import'./../brackpoint';
 
 .cart_header {
     display: flex;
@@ -7,6 +8,11 @@
     height: 40px;
     gap: 75px;
     justify-content: space-between;
+
+    @include mobile {
+        display: none;
+    }
+    
 
 
     &__user {
@@ -24,6 +30,9 @@
     .user_info{
         display: flex;
         flex-direction: column;
+        @include mobile {
+            flex-direction: row;
+        }
 
         &__statistic {
             color: $light_text;
@@ -107,20 +116,28 @@
     background-color: whitesmoke;
     width: 100%;
     height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding-top: 30vh;
   }
   
   .cart {
     position: relative;
     display: flex;
-    width: 768px;
-    padding-bottom: 0px;
+    max-width: 768px;
+
     flex-direction: column;
     align-items: flex-start;
     border-radius: 8px;
     background-color: white;
-    padding: 24px;
+    padding: 1.5rem;
+
+    margin: 0 auto;
+
+    @include mobile {
+        max-width: 351px;
+        padding: 1rem;
+        
+    }
   
   }
+
+

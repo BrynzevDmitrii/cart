@@ -1,0 +1,115 @@
+@import './../color';
+@import'./../fonts';
+@import'./../brackpoint';
+
+// .cart_header__mobile{
+//     display: flex;
+//     width: 100%;
+//     height: 40px;
+//     gap: 8px;
+
+//     @include desktop {
+//         visibility: hidden;
+//     }
+ 
+//     .user_avatar{
+//         width: 32px;
+//         height: 32px;
+//         border-radius: 50%;
+//         background: whitesmoke;
+//     }
+
+//     .user_info{
+//         display: flex;
+//     }
+
+//     .cart_header__statistics{
+//         display: flex;
+//     }
+//     .item{
+//         display: flex;
+//     }
+// }
+
+.mobile_header {
+    @include desktop {
+        display: none;
+    }
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+    .left_wrapper {
+        display: flex;
+        gap: 8px;
+        .user_avatar{
+            width: 32px;
+            height: 32px;
+            border-radius: 50%; 
+        }
+        .left_wrapper__info{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .info_name{
+            color: $bold_text;
+            @include bold-14;
+        }
+
+        .info_statistics{
+            display: flex;
+            align-items: center;
+     
+            .statistic_vin{
+                align-self: stretch;
+                color: $green;
+                @include bold-14;
+            }
+          
+        
+            .statistic_draw {
+                align-self: stretch;
+                color: $light_text;
+                @include bold-14;
+            }
+
+            .statistic_loss {
+                align-self: stretch;
+                color: $red;
+                @include bold-14;
+            }
+
+            .statistic_ROI {
+                color:$bold_text;
+                @include bold-14;
+            }
+
+            .slash {
+                font-size: 14px;
+                margin: 0 5px 0 5px;
+            }
+
+
+        }
+
+    }
+
+    .right_wrapper__info{
+        display: flex;
+        flex-direction: column;
+
+        .info_day{
+            @include light-14;
+            color: $light_text;
+        }
+
+        .info_profit{
+            @include bold-14;
+            color: $green;
+        }
+    }
+
+}

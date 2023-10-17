@@ -1,5 +1,6 @@
 @import './../color';
 @import'./../fonts';
+@import'./../brackpoint';
 
 .cart_body {
     display: flex;
@@ -12,13 +13,18 @@
         @include light-16;
         transition:  height 0.5s ease-in-out;
         height: 112px;
+        @include mobile {
+            overflow: hidden;
+        }
         
     }
 
     &__full {
         transition:  height 0.5s ease-in-out;
-       height: 180px;
-        
+        height: 180px;
+        @include mobile {
+            height: 362px;
+        }
     }
 
 }

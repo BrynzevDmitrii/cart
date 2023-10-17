@@ -1,5 +1,6 @@
 @import './../color';
 @import'./../fonts';
+@import'./../brackpoint';
 
 .cart_footer {
        width: 100%;
@@ -12,6 +13,12 @@
             gap: 16px;
             z-index: 2;
             justify-content: space-between;
+
+            @include mobile {
+                flex-direction: column;
+                align-items: start;
+                padding: 16px 16px 16px 14px;
+            }
         }
         &__back{
             position: absolute;
@@ -20,6 +27,9 @@
             left: 0;
             height: 96px;
             z-index: 0;
+           @include mobile {
+            height: 146px;
+           }
             &::after{
                 content: "";
                 width: 2px;
@@ -31,10 +41,16 @@
                 height: 100%;
                 z-index: 2;
             }
+
+           
         }
 
         &__forecast{
             width: 423px;
+
+            @include mobile {
+                width: 223px;
+            }
 
             .title {
                 text-transform: uppercase;
@@ -47,24 +63,8 @@
                 color: $bold_text;
             }
         }
-    
-            .coefficient{
-                display: flex;
-                gap: 12px;
 
-                &_content{
-                    display: flex;
-                    flex-direction: column;
-                    &__title{
-                        @include light-12;
-                        color: $grey;
-                    }
-                    &__count {
-                       @include bold-20;
-                        color: $bold_text;
-                    }
-                }
-            }
+                
         
         .title {
             text-transform: uppercase;
@@ -81,6 +81,11 @@
         .coefficient{
             display: flex;
             gap: 12px;
+
+            @include mobile {
+                display: none;
+            }
+
             &_content{
                 display: flex;
                 flex-direction: column;
@@ -113,7 +118,22 @@
                 color: $wite;
                 cursor: pointer;
 
+                @include mobile{
+                    width: 100%;
+                }
+
+            }
+
+
+            .coefficient_mob{
+                @include desktop {
+                    display: none;
+                }
+                display: flex;
+                gap: 12px;
+                position: absolute;
+                top: 36px;
+                left: 260px;
+
             }
 }
-
-
