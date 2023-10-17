@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Cart</title>
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <section class="cart">
+
+            <div class="cart_header">
+                <div class="cart_header__user">
+                    <div >
+                        <img class="user_avatar" src="./public/images/match-atoms-avatar-32-face.png" alt="user_avatar">
+                    </div>
+                    <div class="user_info">
+                        <h3 class="user_info__name">
+                            Владимир Вуйтек
+                        </h3>
+                        <p class="user_info__statistic">
+                            Статистика за последние 30 дней
+                        </p>
+                    </div>
+                </div>
+                <ul class="cart_header__statistics">
+                    <li class="item">
+                        <span class="vin_icon">+</span>
+                        <span id="vin_count" class="vin_count">647</span>
+                    </li>
+                    <li class="item">
+                        <span class="draw_icon">=</span>
+                        <span id="draw_count" class="draw_count">29</span>
+                    </li>
+                    <li class="item">
+                        <span class="loss_icon">-</span>
+                        <span id="loss_count" class="loss_count">413</span>
+                    </li>
+                    <li class="item">
+                        <span class="ROI_icon">ROI, %</span>
+                        <span id="ROI_count" class="ROI_count">23,9%</span>
+                    </li>
+                    <li class="item">
+                        <span class="profit_icon">Прибыль</span>
+                        <span id="profit_count" class="profit_count">+22 820</span>
+                    </li>
+                </ul>
+            </div>
+            <hr class="line">
+            <div class="cart_body">
+                <span class="cart_body__content">
+                    В Кубке страны команда Унаи Эмери бессовестно размялась на «Виктории» из Ла-Коруньи (8:0). При этом серьёзные соперники: «Севилья», «Барселона» (даже кризисная) и «МЮ» (ещё более кризисный) — били «Вильярреал». ЛЧ не турнир для Эмери. Он гроссмейстер убогой ЛЕ.
+ Поэтому у «Аталанты» есть шансы. Ей необходимо играть лишь на победу. Только выигрыш выводит её в плей-офф ЛЧ. А поражение в комплекте с победой «Янг Бойз» над «МЮ» оставляет бергамасков без еврокубковой весны. Гасперини вполне по силам одолеть команду Эмери. «Аталанта» уже обыгрывала недавно «Юве» и «Наполи». Поставлю на победу итальянского клуба.
+                </span>
+            </div>
+            <div class="more">
+                <button class="more_btn">
+                    <img src="./public/images/match-button-24-down.svg" alt="reading_more">
+                </button>
+            </div>
+            
+            <div class="cart_footer">
+                <div class="cart_footer__back"></div>
+                <div class="cart_footer__wrapper">
+                <div class="cart_footer__forecast">
+                    <span class="title">ПРОГНОЗ</span>
+                    <p class="action">
+                        Штрафное время: тотал <span id='action_data' class="action">меньше 16,5</span>
+                    </p>
+                </div>
+                <div class="coefficient">
+                    <img src="./public/images/match-1-stavka-32.svg" alt="imeges_coefficient">
+                    <div class="coefficient_content">
+                        <span class="coefficient_content__title">Коэффициент</span>
+                        <span id="coefficient_count" class="coefficient_content__count">3.20</span>
+                    </div>
+                </div>
+                <button class="button_bet">
+                    Сделать ставку
+                </button>
+            </div>
+            </div>
+        </section>
+
+    </div>
+<script src="./js/open.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+@import './../color';
+@import'./../fonts';
+
+.cart_header {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    gap: 75px;
+    justify-content: space-between;
+
+
+    &__user {
+        display: flex;
+        gap: 12px;
+        align-items: center;     
+    }
+
+    .user_avatar {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: whitesmoke;
+    }
+    .user_info{
+        display: flex;
+        flex-direction: column;
+
+        &__statistic {
+            color: $light_text;
+            @include light-14;
+        }
+        &__name{
+            color: $bold_text;
+            @include bold-14;
+        }
+    }
+
+    &__statistics{
+        display: flex;
+        gap: 12px;
+        align-items: flex-end;
+        justify-content: space-between;
+        width: 55%;
+
+        .item{
+            display: flex;
+            flex-direction: column;
+            width: 64px;
+            height: 40px;
+           
+            .vin_icon, .vin_count{
+                align-self: stretch;
+                color: $green;
+                @include bold-14;
+            }
+          
+        
+            .draw_icon, .draw_count {
+                align-self: stretch;
+                color: $light_text;
+                @include bold-14;
+            }
+
+            .loss_icon, .loss_count {
+                align-self: stretch;
+                color: $red;
+                @include bold-14;
+            }
+
+            .ROI_icon, .profit_icon {
+                color:$bold_text;
+                @include light-12;
+            }
+
+            .ROI_count, .profit_count {
+                color: $green;
+                @include bold-14;
+                
+            }
+
+            .vin_icon::after, .draw_icon::after,.loss_icon::after,.ROI_icon::after, .profit_icon::after {
+                content: '';
+                display: flex;
+                border: 1px solid $stroke;
+                width: 64px;
+                margin-top: 5px;
+                margin-bottom: 5px;
+
+            }
+        
+
+        }
+    }
+
+   
+}
+
+.line {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border: 1px solid $stroke;
+    display: flex;
+    width: 100%;
+}
+
+.wrapper {
+    background-color: whitesmoke;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .cart {
+    position: relative;
+    display: flex;
+    width: 768px;
+    padding-bottom: 0px;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 8px;
+    background-color: white;
+    padding: 24px;
+  
+  }

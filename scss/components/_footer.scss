@@ -1,0 +1,119 @@
+@import './../color';
+@import'./../fonts';
+
+.cart_footer {
+       width: 100%;
+
+        &__wrapper {
+            position: relative;
+            display: flex;
+            padding: 24px 24px 24px 22px;
+            align-items: flex-end;
+            gap: 16px;
+            z-index: 2;
+            justify-content: space-between;
+        }
+        &__back{
+            position: absolute;
+            background-color: whitesmoke;
+            width: 100%;
+            left: 0;
+            height: 96px;
+            z-index: 0;
+            &::after{
+                content: "";
+                width: 2px;
+                position: relative;
+                -ms-flex-item-align: stretch;
+                align-self: stretch;
+                background-color: $blue;
+                display: flex;
+                height: 100%;
+                z-index: 2;
+            }
+        }
+
+        &__forecast{
+            width: 423px;
+
+            .title {
+                text-transform: uppercase;
+                @include bold-12;
+                color: $light_text;
+                margin-bottom: 8px;
+            }
+            .action{
+                @include bold-18;
+                color: $bold_text;
+            }
+        }
+    
+            .coefficient{
+                display: flex;
+                gap: 12px;
+
+                &_content{
+                    display: flex;
+                    flex-direction: column;
+                    &__title{
+                        @include light-12;
+                        color: $grey;
+                    }
+                    &__count {
+                       @include bold-20;
+                        color: $bold_text;
+                    }
+                }
+            }
+        
+        .title {
+            text-transform: uppercase;
+            @include bold-12;
+            color: $light_text;
+            margin-bottom: 8px;
+        }
+        .action{
+            @include bold-18;
+            color: $bold_text;
+        }
+    
+
+        .coefficient{
+            display: flex;
+            gap: 12px;
+            &_content{
+                display: flex;
+                flex-direction: column;
+                &__title{
+                    @include light-12;
+                    color: $grey;
+                }
+                &__count {
+                   @include bold-20;
+                    color: $bold_text;
+                }
+            }
+        }
+
+            .button_bet{
+                display: flex;
+                width: 140px;
+                height: 40px;
+                padding: 12px 16px;
+                justify-content: center;
+                align-items: center;
+                gap: 8px;
+                border-radius: 4px;
+                border: none;
+                outline: none;
+                background: $blue;
+
+                text-align: center;
+                @include light-14;
+                color: $wite;
+                cursor: pointer;
+
+            }
+}
+
+

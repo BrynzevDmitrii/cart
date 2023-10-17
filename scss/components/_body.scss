@@ -1,0 +1,67 @@
+@import './../color';
+@import'./../fonts';
+
+.cart_body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+
+    &__content {
+        color:$body_text;
+        @include light-16;
+        transition:  height 0.5s ease-in-out;
+        height: 112px;
+        
+    }
+
+    &__full {
+        transition:  height 0.5s ease-in-out;
+       height: 180px;
+        
+    }
+
+}
+
+
+.more {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background: linear-gradient(to top, rgb(255, 255, 255, 1.0), rgb(248, 248, 248, 0.9));
+
+    
+    &_btn {
+        width: 40px;
+        height: 40px;
+        position: relative;
+        top: 20px;
+        z-index: 3;
+        display: flex;
+        padding: 12px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        border-radius: 20px;
+        background: $wite;
+        box-shadow: 2px 4px 12px 0px rgba(0, 0, 0, 0.08);
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: transform 0.5s ease-in-out;
+        transform: rotate(0deg); 
+        
+        
+        img{
+            cursor: pointer;
+        }
+    }
+
+    .transform_btn {
+        
+            transform: rotate(180deg); 
+            transition: transform 0.5s ease-in-out;
+        
+    }
+}   
